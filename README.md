@@ -91,9 +91,37 @@ When deciding a name for a file/folder, there are some chars you shouldn't inclu
 Command: mkdir - create directories
 
 ### Exercise
+Link: https://plum-poppy-0ea.notion.site/Making-Files-And-Folders-Exercise-5da482693b3547058be3496d60e54144
 - mkdir my-app
 - touch README.md package.json
 - mkdir public, touch public/index.html
 - mkdir src, cd src
 - touch App.css App.js index.css index.js
 - Bonus question: mkdir -p components/Navbar
+
+## Section 7: Nano
+### Material
+Nano is a file editor, like vim (learned at school already)
+To open an existing file with nano: nano book.txt
+Nano is useful for creating files
+Has multiple useful shortcuts
+
+You can use spellcheck in Nano, but it is disabled by default, we can configure it by going into /etc/nanorc
+
+## Exercise
+Link: https://plum-poppy-0ea.notion.site/Nano-Exercise-a6daa37a53bd4b749f3c8f085936fc74
+
+Part 1
+- nano recipe.txt
+- added my name on the line 3 after Author
+- used ctrl + w to find two instances of 'Parm'
+- used ctrl + O then enter, thyen ctrl + X to exit
+Part 2
+- nano website.html
+- Alt + R, replace Ristorante Colt with Patty Slaps, replaced all 4 instances
+- saved with ctrl + O and ctrl + X to exit
+Part 3
+- nano country-data.json
+- ctrl + \ (replace) and type in line 15399, fix the spelling of the country and save the file
+Bonus
+- nano recipe.txt, then ctrl + r review.txt which inserted 10 lines from that file
