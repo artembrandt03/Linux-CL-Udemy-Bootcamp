@@ -125,3 +125,31 @@ Part 3
 - ctrl + \ (replace) and type in line 15399, fix the spelling of the country and save the file
 Bonus
 - nano recipe.txt, then ctrl + r review.txt which inserted 10 lines from that file
+
+## Section 8: Moving & Deleting
+### Material
+Command: rm - removes/deletes files or directories
+- Example: rm script.js
+- To delete folders that are empty: rm -d, or rmdir
+- To remove directories and their contents recursevly: rm -r
+- Add -i to prompt for a confirmation before deleting
+
+Command: mv <source> <destination> - used for moving files/directories OR renaming
+- The folder where we move things needs to be existent already
+- We can move multiple source files, but to only one destination
+- We can also move directories, but the destination dir needs to be existent otherwise the command will rename the dir we're trying to move
+- We can also use it to rename: mv <currentname> <newname>
+
+Command: cp <source> <destination> - used for copying files
+Can aslo be used to copy directories: cp -r
+
+### Exercise
+Link: https://plum-poppy-0ea.notion.site/Deleting-Moving-Copying-Exercise-90384060a2444b88bef15f052dd6b721
+Part 1
+![image](https://github.com/user-attachments/assets/b0873c88-2243-4480-80e6-8912d3df385f)
+Part 2
+![image](https://github.com/user-attachments/assets/be3d546d-742c-44df-be0d-a664db14d744)
+![image](https://github.com/user-attachments/assets/ce8caa1d-2093-4860-bf8f-98462f1c4bee)
+
+
+
