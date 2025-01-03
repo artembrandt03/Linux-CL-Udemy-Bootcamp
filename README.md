@@ -151,5 +151,22 @@ Part 2
 ![image](https://github.com/user-attachments/assets/be3d546d-742c-44df-be0d-a664db14d744)
 ![image](https://github.com/user-attachments/assets/ce8caa1d-2093-4860-bf8f-98462f1c4bee)
 
+## Section 9: Shortcuts & History
+Shortcut: ctrl + l - to clear the termianl
+Shortcut: ctrl + a - jump to the beginning of the line
+Shortcut: ctrl + e - jump to the end of the line
+Shortcut: alt+f or alt+b - move forward/backward one word at a time
+Shortcut: ctrl+t - swap the current character under the cursor with the one preceeding it
+Shortcut: ctrl+k - kill the text from the cursor location until the end of line
+Shortcut: ctrl+u - kill the text from cursor to the beginning of the line
+Shortcut: alt+d - to kill text from current cursor location till the end of word
+Shortcut: ctrl+w or alt+delete to go in the opposite direction
+Shortcut: ctrl+y - retrieve the most recent 'kill' with other commands (this is called yanking)
 
+History - bash keeps a record of commands we previously entered. We could already scroll through history withj up and down arrows to see the commands;
+But you can also use 'history' command to view the entire history, though it's generally easier with piping the output to | less
+To run a command that's far in our history, we can look at the line it's at and run that 'line'
+  Example: command at line 1314
+          !1314
 
+Shortcut: ctrl+r - to search through history
