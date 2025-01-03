@@ -24,7 +24,7 @@ Example: help cd
 ![image](https://github.com/user-attachments/assets/32d80904-7f4d-47e0-b3e8-a2f0de540c78)
 ![image](https://github.com/user-attachments/assets/bfb8de21-1a71-4a44-a549-2170316a3b1f)
 
-### Exercise - getting HELP
+### Exercise
 Link: https://plum-poppy-0ea.notion.site/Getting-Help-Exercise-dac5ac2d63764c6180c1eb31204ba98a
 
 - command: whoami - prints user name. doesn't need any options or arguments
@@ -61,7 +61,7 @@ Paths: relative and absolute
 ![image](https://github.com/user-attachments/assets/262f6d83-db77-4c0d-89cf-66f34c28fb0f)
 ![image](https://github.com/user-attachments/assets/0812f13b-7757-4923-878b-a5ebffecc600)
 
-### Exercise - Navigation
+### Exercise
 Link: https://plum-poppy-0ea.notion.site/Navigation-Exercise-cfabfffd1fc04c22a76b6e3ebb60a4ca
 
 - cd Desktop/Farm
@@ -77,3 +77,23 @@ Link: https://plum-poppy-0ea.notion.site/Navigation-Exercise-cfabfffd1fc04c22a76
 - ls, 4
 - ls -a, Troy
 - Bonus question: ls -m, printed all the horses in a comma separated list
+
+## Section 6: Creating Files & Folders
+### MateriaL
+Command: touch - used for creating files (can create with or without extensions) (technically the command was created to update modification time, but it is moslty used for creating new files)
+
+Command: file - helps determining the file type
+
+When deciding a name for a file/folder, there are some chars you shouldn't include in a name (, / space etc)
+
+\ is an escape character 
+
+Command: mkdir - create directories
+
+### Exercise
+- mkdir my-app
+- touch README.md package.json
+- mkdir public, touch public/index.html
+- mkdir src, cd src
+- touch App.css App.js index.css index.js
+- Bonus question: mkdir -p components/Navbar
