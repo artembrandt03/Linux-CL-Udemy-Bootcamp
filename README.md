@@ -209,8 +209,40 @@ Part 2
 ![image](https://github.com/user-attachments/assets/4b6455f3-ad1f-4675-9bbb-471a28719a2e)
 ![image](https://github.com/user-attachments/assets/a034de11-7d5a-46a3-9ac4-ac6fc9120e8f)
 
+## Section 11: Redirection
+### Material
+Standart Streams - three communication channels
+- Standart Input (STDIN)
+- Standart Output (STDOUT)
+- Standart Error (STDERR)
 
+Redirection describes the ways we can alter the source of standart input and the destinations of stdout and stderr
+Exmaple: date > today.txt - redirects the first command into a file
 
+Appending: with '>', any existing content in a file is overwritten
+           we can use '>>' to append instead
+
+Redirecting input: command < filename
+                   cat < chickens.txt
+
+We can do both at the same time: cat < original.txt > output.txt
+
+Redirecting standart error: 2>
+
+Using all together exmaple: cat bees.txt ants.txt > insects.txt 2> error.txt 
+To redirect stderr to the same location as standart output: 2>&1
+  Example: ls docs > output.txt 2> output.txt
+           instead do:
+           ls docs > output.txt 2>&1
+For newer bash versions: &>
+
+### Exercise
+Link: https://plum-poppy-0ea.notion.site/Redirection-Exercise-db6cb41044434c678f59c08e824d1828
+
+![image](https://github.com/user-attachments/assets/02405ccd-b524-4682-b0e9-5b89edde7321)
+![image](https://github.com/user-attachments/assets/a99f6d62-e89f-479b-b998-c65aa1abf156)
+![image](https://github.com/user-attachments/assets/3dee4f62-6e05-4f99-8c45-d9aadf3cf1da)
+![image](https://github.com/user-attachments/assets/94395a53-69a2-408b-a1c8-c3745c459b0d)
 
 
 
