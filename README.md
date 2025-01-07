@@ -170,3 +170,47 @@ To run a command that's far in our history, we can look at the line it's at and 
           !1314
 
 Shortcut: ctrl+r - to search through history
+
+## Section 10: Working With Files
+### Material
+Command: cat <filename> - prints the contents of a file
+Can also [concatinate] multiple file (prints them together): cat <file1> <file2>
+
+Command: less - prints contets of a file one page at a time
+The interface is the same as using man page: we can scroll down or go down by one page using 'space', to search for a keyword use '/'
+
+Command: tac (cat backwards) - does what cat does in the opposite order
+
+Command: rev - prints contest of a file reversing the order of each line
+
+Command: head - prints a portion of a file (first 10 lines by default)
+To change the number of lines: head - n 5 file.txt (prints first 5 lines) (can also just type '-' with no 'n')
+
+Command: tail - does the same as head except starting from the end
+To change the number of lines: tail - n 5 file.txt (prints first 5 lines) (can also just type '-' with no 'n')
+
+Command: wc - tells number of word/lines in the file
+wc book.txt: 4 6 33 book.txt (lines, words, bytes)
+Can use multiple options for a specific number we want
+
+Command: sort - outputs the sorted contents of a file (alphabetically by default)
+Doesn't actually change the contents
+-r for reverse, -n to sort nummerically, -u for unique values
+-k to specify a column/field by which we want to sort
+
+### Exercise
+Link: https://plum-poppy-0ea.notion.site/Working-With-Files-Exercise-1f1136c779da4f3286e6cfb6c934d571
+
+Part 1
+![image](https://github.com/user-attachments/assets/3ca4b774-5f0e-46cb-bd42-befdfeb36ff8)
+![image](https://github.com/user-attachments/assets/b39d9b5d-0253-4bf0-bad0-4d21c3b6517a)
+![image](https://github.com/user-attachments/assets/b3c9af10-4cb4-47a7-a36b-6a78b2e159d5)
+Part 2
+![image](https://github.com/user-attachments/assets/4b6455f3-ad1f-4675-9bbb-471a28719a2e)
+![image](https://github.com/user-attachments/assets/a034de11-7d5a-46a3-9ac4-ac6fc9120e8f)
+
+
+
+
+
+
