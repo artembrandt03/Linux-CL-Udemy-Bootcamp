@@ -244,5 +244,39 @@ Link: https://plum-poppy-0ea.notion.site/Redirection-Exercise-db6cb41044434c678f
 ![image](https://github.com/user-attachments/assets/3dee4f62-6e05-4f99-8c45-d9aadf3cf1da)
 ![image](https://github.com/user-attachments/assets/94395a53-69a2-408b-a1c8-c3745c459b0d)
 
+## Section 12: Piping
+### Material
+We use the pipe character ( | ) to separate two commands: command1 | command 2
+Examples: 
+- date | rev
+- ls -l | less
 
+Differences between redirecting and piping: 
+> connects a command to some file
+| connects a command to another command
 
+Command: tr - it will take text from stdin and outputs based on a set of characters to match and translate
+Some examples:
+- cat msg | tr s S
+- cat msg | tr s a
+- cat msg | tr a-z A-Z
+- cat msg | tr -d s
+- cat data.txt | tr -d [:alpha:] | tr -d
+- cat data.txt | tr -d [:alpha:] | tr -d : | tr -d [:blank:] > phones.txt
+
+We can pipe multiple times in a row to achieve a desired output
+Example: cat file | head -7 | tail -5
+
+Command: tee <file> - reads stdin and copies it both  to stdout and to a file
+This allows us to capture info in the middle of a pipeline without interrupting the flow
+It goes like this: command1 | tee file.txt | command2
+Example: ( cat colors.txt words.txt > colorsAndWords.txt | wc ) WON't WORK because we cannot pipe a file into wc
+Instead do this: cat colors.txt words.txt | tee colorsAndWords.txt | wc
+
+### Exercise
+Link: https://plum-poppy-0ea.notion.site/Piping-Exercise-2be75864d4bb42beabb6b3d89cda2be3
+
+![image](https://github.com/user-attachments/assets/d665fc52-918b-448d-b4ed-74460e145ba7)
+![image](https://github.com/user-attachments/assets/d992a877-0e47-4c0e-9e21-0be14b13772c)
+![image](https://github.com/user-attachments/assets/d76b1798-462b-4db2-b779-927a413dd714)
+![image](https://github.com/user-attachments/assets/3c617986-86a7-4c07-9208-80d373cdc255)
