@@ -280,3 +280,50 @@ Link: https://plum-poppy-0ea.notion.site/Piping-Exercise-2be75864d4bb42beabb6b3d
 ![image](https://github.com/user-attachments/assets/d992a877-0e47-4c0e-9e21-0be14b13772c)
 ![image](https://github.com/user-attachments/assets/d76b1798-462b-4db2-b779-927a413dd714)
 ![image](https://github.com/user-attachments/assets/3c617986-86a7-4c07-9208-80d373cdc255)
+
+## Section 12: Expansion
+### Material
+Some characters in bash cannot be echoed, as they posses a specia meaning
+
+* - wildcard character, represents zero or more characters in a filename
+Examples: ls *.html will match any files that match with .html like index.html for example
+
+? - represents a single character 
+
+[] - matches a range of characters
+Examples: ls [A-F]*
+          ls pic[123].png will match pic1.png, pic2.png, pic3.png
+Negative ranges: if we include ^ inside [], we tell to match everything EXCEPT that wildcard
+
+~ is a wildcard for home directory
+
+Brace expansion ( {} ) is sued to generate arbitrary strings. What it does is generating multiple strings for us based on a pattern.
+Example: touch page{1,2,3}.txt will generate three files: page1.txt, page2.txt, page3.txt
+
+Ranges: 
+- mkdir jan{1..31} will generate jan1, jan2...jan31
+- echo {2..10..2} will print 2,4,6,8,10
+- touch group-{a..e}.txt will generate files group-a/txt, group-b.txt...
+
+Nested brace expansion: example - echo {x,y{1..5}, z} --> x y1 y2 y3 y4 y5 z
+
+Arithmetic Expansion: the shell will perform math via expansion using $((expression)) syntax. Inside, we can write arithemtic expressions using: +, -, *, /, ** (exponents), % (modulo)
+
+Quoting:
+- " ": using the double quotes, the shell will respect the spacing and ignore special characters except for $, \ and `.
+
+Command substitution: we can use $(command) to display the output of another command
+Example: echo "today is $(date)"
+
+### Exercise
+Link: https://plum-poppy-0ea.notion.site/Expansion-Exercise-added25bbf314060a226a81c09921892
+
+#### Part 1
+![image](https://github.com/user-attachments/assets/8527d80d-3d5b-4b7e-96f6-9bdc20a241d7)
+![image](https://github.com/user-attachments/assets/c34250b0-e76f-425a-85f6-23d74a02eb1d)
+#### Part 2
+![image](https://github.com/user-attachments/assets/c98adfa2-e31a-4ca8-a95d-51bd73fecb32)
+#### Part 3
+![image](https://github.com/user-attachments/assets/7d915dc4-5a2a-448e-bcd1-56c2f06964b6)
+![image](https://github.com/user-attachments/assets/47cc3e8b-327f-47e7-80a9-b0d839633166)
+
