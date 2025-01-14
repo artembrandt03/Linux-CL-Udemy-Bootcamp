@@ -327,3 +327,45 @@ Link: https://plum-poppy-0ea.notion.site/Expansion-Exercise-added25bbf314060a226
 ![image](https://github.com/user-attachments/assets/7d915dc4-5a2a-448e-bcd1-56c2f06964b6)
 ![image](https://github.com/user-attachments/assets/47cc3e8b-327f-47e7-80a9-b0d839633166)
 
+## Section 14: Finding Things
+### Material
+Command: locate - quick way to perform a search of pathnames across our machine that match a given substring and then prints out any matching names
+
+Command: find - a more powerful version of locate, by default lists every single file and directory nested in our current weorking directory.
+- We can also provide a specific folder.
+- Finding by type: we can tell find to only find by file type - only print files, dirs etc.
+  Examples: find -type f will limit the search to files.
+            find -type d for directories
+- finding by name: -name "pattern"; Example: find ~/Desktop -name "*.txt".
+  iname is for case insensitive search.
+- find -size will helps us finding files of a specific size: find -size +1G, find -size -50M, find -size -20k
+
+Timestamps:
+- mtime: modification time
+- ctime: change time
+- atime: access time
+
+Logical operators - can be used in combination with find command:
+- and
+- or
+- not
+Example: find -name "\*chick\*" -or -name "\*kitty\*"'
+
+User Defined Actions:
+We can provide find with our own action to perform using each mathcing pathname. The syntax: find -exec command {} ; .
+Example: find ~ -type f -empty -exec ls -l '{}' ';' (for every match we find run ls -l command)
+
+Command: xargs - a command to build up the input into a bundle that will be provided as an argument list to the next command.
+Example: find -name "*.txt" | xargs ls
+
+### Exercise
+Link: https://plum-poppy-0ea.notion.site/Find-Exercise-1258f6c24327427888e3662cab37b4f9
+
+![image](https://github.com/user-attachments/assets/e314e3a5-5b1e-4d9e-a1d7-af02f5823982)
+![image](https://github.com/user-attachments/assets/edcc2be4-b971-4f66-9309-c4b72e503eca)
+![image](https://github.com/user-attachments/assets/ebfd5b43-7dc5-427e-b364-1b2d3ca67800)
+![image](https://github.com/user-attachments/assets/eac16faf-d03c-418f-804a-1e770a45f282)
+![image](https://github.com/user-attachments/assets/32400e86-830f-484b-8560-3f1127d38657)
+![image](https://github.com/user-attachments/assets/76be131a-d846-476c-a90d-4a5bf497d6a1)
+![image](https://github.com/user-attachments/assets/19f44fa5-0872-4141-8d89-522ab46d7afc)
+![image](https://github.com/user-attachments/assets/1b8fca32-5dcb-4bbc-867e-2facf35ba689)
