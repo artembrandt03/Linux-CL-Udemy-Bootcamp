@@ -369,3 +369,91 @@ Link: https://plum-poppy-0ea.notion.site/Find-Exercise-1258f6c24327427888e3662ca
 ![image](https://github.com/user-attachments/assets/76be131a-d846-476c-a90d-4a5bf497d6a1)
 ![image](https://github.com/user-attachments/assets/19f44fa5-0872-4141-8d89-522ab46d7afc)
 ![image](https://github.com/user-attachments/assets/1b8fca32-5dcb-4bbc-867e-2facf35ba689)
+
+## Section 15: Grep
+### Material
+Command: grep - searches for patterns within files contents
+How to use: grep PATTERN FILE
+Example: grep "chicken" animals.txt
+
+There are a lot of different useful options:
+- "-w" option to ensure that it matches a word not not a pattern (exmaple: cat and not cattle)
+- "-r" option for recusrive search: will search the pwd and nested directories for the lines that contain the pattern
+- "-i" for case insensitive
+- "-c" to count how many times the match occurs
+- "-A/-B" to include lines before and after the line where the match occurs. Examples: grep "wagon" file.txt -A1
+- "-C" does A and B combines, so C1 for example will give 1 line before and after the line that matches
+- "-n" will show the line numbers
+
+Regex: pattern matching syntax
+![image](https://github.com/user-attachments/assets/22cf0763-3280-41c2-b48c-5ee68fe77742)
+
+Egrep/grep -E lets us use special chars when matching patterns
+
+Command: ps - shows current processes
+
+## Section 16 & 17: Permission Basics & Altering Permissions
+### Material
+Command: whoami - shows your user
+We can have multiple users on the same OS
+
+#### File Owners and Group Owners
+- File Owner (User):
+  Every file or directory is owned by a user. Typically, this is the user who created the file. The owner has specific permissions on the file.
+- Group Owner:
+  Each file or directory is also associated with a group. A group consists of one or more users. Any user in the group will have the group's permissions for that file.
+
+#### File Type Attribute
+
+In Bash (and Unix-like systems), permissions determine what actions can be performed on a file or directory by different users. Here's a breakdown of the basics:
+
+1. File Owners and Group Owners
+File Owner (User):
+Every file or directory is owned by a user. Typically, this is the user who created the file. The owner has specific permissions on the file.
+
+Group Owner:
+Each file or directory is also associated with a group. A group consists of one or more users. Any user in the group will have the group's permissions for that file.
+
+2. File Type Attribute
+When you view file attributes (e.g., using ls -l), the first character indicates the file type:
+
+- : Regular file
+d : Directory
+l : Symbolic link
+b : Block device (e.g., a hard drive)
+c : Character device (e.g., a terminal)
+p : Named pipe
+s : Socket
+Example:
+-rw-r--r--  1 user group 1024 Jan 15 14:00 file.txt
+Here, the - at the beginning indicates a regular file.
+
+#### Read, Write, and Execute Permissions
+Permissions are divided into three categories: owner, group, and others. Each category has three types of permissions:
+
+Read (r)
+- For files: Allows the contents of the file to be read.
+- For directories: Allows the listing of directory contents.
+Write (w)
+- For files: Allows modifying or deleting the file.
+- For directories: Allows adding, deleting, or renaming files within the directory.
+Execute (x)
+- For files: Allows executing the file as a program or script.
+- For directories: Allows accessing the directory (required to cd into it).
+
+#### Permission Representation
+ermissions are displayed as a string of 10 characters when using ls -l: 
+-rwxr-xr--  1 user group 1024 Jan 15 14:00 file.txt
+
+#### Numeric (Octal) Representation
+Permissions can also be represented using numbers (octal system):
+
+4: Read
+2: Write
+1: Execute
+Combine these values to represent permissions:
+
+7 (4+2+1): Read, Write, Execute (rwx)
+6 (4+2): Read, Write (rw-)
+5 (4+1): Read, Execute (r-x)
+4: Read only (r--)
