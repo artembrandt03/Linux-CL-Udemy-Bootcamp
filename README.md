@@ -457,3 +457,26 @@ Combine these values to represent permissions:
 6 (4+2): Read, Write (rw-)
 5 (4+1): Read, Execute (r-x)
 4: Read only (r--)
+
+#### Changing permissions
+Command: chmod - alows us to chnage the permissions on a file/dir like so - chmod mode file
+We need to specify who we chnage the permissions for, are we adding or removing them, to which permission.
+
+Who?
+- u: user (owner)
+- g: group
+- o: others
+- a: all of the above
+
+(minus) -, + and = for granting and revoking permissions
+Examples: chmod u+x file.txt
+          chmod a=r file.txt
+          chmod g-x file.txt
+
+#### Other
+Command: su - switch to another user
+
+Root User/Super User - can run any commmand and acces any file on the machine
+
+Command: sudo - allows us to run commands as a root user
+Command: chown - used to change the owner and/or the group owner of a specific file/dir - chown bojack file.txt
