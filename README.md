@@ -11,7 +11,7 @@ By completing this course, I’ve refreshed and advanced my Linux skills in prep
 - Automation of tasks using cron and cronjobs.
 - Advanced data manipulation using pipes and redirection.
 - Usage of powerful tools like `grep`, `find`, and `nano`.
-- 
+
 #### Commands Practiced
 A few examples include:
 - `ls`, `cd`, `pwd`, `touch`, `mkdir`
@@ -20,7 +20,7 @@ A few examples include:
 - `nano`, `sudo`, `crontab`, and more!
 
 This README serves as a reference for my progress and as a showcase of my commitment to improving my Linux proficiency!
-From now on you can refer to what I've learned throughout each section :)
+From now on you can refer to what I've learned throughout each section as you are reading my notes :)
 
 
 ## Section 1-3: Introduction & Using the terminal
