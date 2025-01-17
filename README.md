@@ -480,3 +480,53 @@ Root User/Super User - can run any commmand and acces any file on the machine
 
 Command: sudo - allows us to run commands as a root user
 Command: chown - used to change the owner and/or the group owner of a specific file/dir - chown bojack file.txt
+
+## Section 18: The Environment
+### Material
+The shell maintains a set of information during a shell session, knows as the *environment*. It's just a series of key-value pairs that define properties like home dir, working dir, shell name, name of a user that is logged in.
+
+Command: printenv - prints environment variables.
+
+Parameter expansion:
+"echo USER" will print: USER
+"echo $USER" will print: Artem
+We need to prefix weith a dollar sign to print the variables.
+
+Defining variables: color="purple"; num=821.
+
+Command: bash - sets up a new shell session, therefore doesn't have acces to "outer" variables.
+Command: export - makes a variables an environment variable
+
+PS1 varibale: is responsible for the prompt
+![image](https://github.com/user-attachments/assets/de2ac1e3-19c9-4fe9-ac5a-95875b61916e)
+
+The startup files: bunch of config files that srartup process looks at.
+
+Aliases: we can define our own commands using "alias" keyword.
+Example: alias ll='ls -al'
+
+## Section 19: Scripting
+### Material
+Basic steps: write a script and save it; make it executable with chmod; verify that the shell can run it.
+
+Shebang: the first line of our script - #!/bin/bash
+To comment: put # and the whole line will be a comment.
+To execute the script: bash <file>.
+
+Weather script: 
+![image](https://github.com/user-attachments/assets/12052e1d-3fe7-477a-8596-6fa3721f3439)
+
+## Section 20: Cron
+### Material
+Cron is a time-based job scheduler in Unix-like operating systems. It allows you to automate repetitive tasks by running scripts or commands at specified times and intervals. Cron is commonly used for tasks such as backups, log rotations, sending emails, or running maintenance scripts.
+
+#### How Cron Works
+Crontab Files:
+- crontab files are configuration files that specify what commands to execute and when.
+- Each user can have their own crontab file.
+- The system-wide crontab file is typically located at /etc/crontab.
+Cron Daemon:
+- The cron daemon reads the crontab files and executes the scheduled tasks.
+- The daemon must be running for scheduled tasks to work.
+Crontab Syntax
+- A crontab file consists of lines with six fields: minute hour day_of_month month day_of_week command
